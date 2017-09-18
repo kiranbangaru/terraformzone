@@ -1,0 +1,6 @@
+terraform plan -var-file ..\var\vpc.tfvars
+
+terraform apply -var-file ..\var\vpc.tfvars -state .\dev\terraformstate.tf -var environment prod 
+
+terraform destroy -var-file ..\var\vpc.tfvars -state .\dev\terraformstate.tf -var environment prod
+
